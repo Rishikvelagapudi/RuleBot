@@ -10,7 +10,7 @@ load_dotenv(env_path)
 # Page config
 st.set_page_config(page_title="RuleBot Web", page_icon="🤖", layout="centered")
 st.title("🤖 RuleBot: Smart AI Assistant")
-st.caption("Powered by Google Gemini 2.5 Flash")
+st.caption("powered By Decodelabs")
 
 # Initialize Gemini API
 api_key = os.getenv("GEMINI_API_KEY")

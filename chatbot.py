@@ -30,7 +30,7 @@ def show_menu():
     menu = """
     ========================================
     Welcome to the Smart AI Chatbot! 
-    Powered by Google Gemini
+    powered By Decodelabs
     ========================================
     - Ask me anything! (e.g., "Explain quantum physics", "Write a python script")
     - Type 'exit', 'quit', or 'bye' to end the chat.
