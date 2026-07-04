@@ -12,10 +12,17 @@ st.set_page_config(page_title="RuleBot Web", page_icon="🤖", layout="centered"
 st.title("🤖 RuleBot: Smart AI Assistant")
 st.caption("powered By Decodelabs")
 
-# Initialize Gemini API
+# Initialize Gemini API (Try env var first, then Streamlit secrets)
 api_key = os.getenv("GEMINI_API_KEY")
+
 if not api_key:
-    st.error("API Key not found. Please add your GEMINI_API_KEY to the .env file.")
+    try:
+        api_key = st.secrets["GEMINI_API_KEY"]
+    except Exception:
+        pass
+
+if not api_key:
+    st.error("API Key not found. Please add your GEMINI_API_KEY to the .env file or Streamlit Secrets.")
     st.stop()
 
 genai.configure(api_key=api_key)
