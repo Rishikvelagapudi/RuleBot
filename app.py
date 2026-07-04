@@ -4,7 +4,8 @@ import google.generativeai as genai
 from dotenv import load_dotenv
 
 # Load environment variables
-load_dotenv()
+env_path = os.path.join(os.path.dirname(__file__), '.env')
+load_dotenv(env_path)
 
 # Page config
 st.set_page_config(page_title="RuleBot Web", page_icon="🤖", layout="centered")
