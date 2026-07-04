@@ -1,0 +1,2 @@
+# This project uses only standard Python libraries (no external dependencies needed).
+# You can run the bot directly using Python 3.x
